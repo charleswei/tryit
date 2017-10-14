@@ -33,15 +33,17 @@ print list2
 print list1
 s2=Series(list1)
 
-plt.plot(s1,label='New Hires')
+plt.plot([0,1,2,3,4,5,6,7,8,9,10,11,12],s1,label="New Hires")
 
-plt.plot(s2,label='Leavers')
+plt.plot([0,1,2,3,4,5,6,7,8,8,10,11,12],s2,label="Leavers")
 #plt.text(60, .025, r'$\mu=100,\ \sigma=15$')  
-plt.ylim(0,200)
+#plt.ylim(0,200)
+
 plt.xlabel('Year')
 plt.ylabel('Number of Associates')
 plt.title('The change of Associates')
 plt.annotate('local max', xy=(10,125), xytext=(7, 125),arrowprops=dict(facecolor='red', shrink=0.01),)  
 plt.xticks([0,1,2,3,4,5,6,7,8,9,10,11],['2006','2007','2008','2009','2010','2011','2012','2013','2014','2015','2016','2017'])
+plt.legend()
 plt.show()
 
